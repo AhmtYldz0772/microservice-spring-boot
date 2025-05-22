@@ -1,0 +1,5 @@
+rootProject.name = 'microservice-spring-boot'
+include 'ServiceA'
+include 'ServiceB'
+include 'ServiceC'
+
