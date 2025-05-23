@@ -1,6 +1,7 @@
 package com.yildiz.controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -18,5 +19,21 @@ public class AuthController {
     }
 
      */
-    
+
+    @PostMapping("/register")
+    public String register(){
+        return null;
+    }
+    @PostMapping("/login")
+    public String login(){
+        return null;
+    }
+    @GetMapping("/findAll")
+    public String findAll(){
+        return null;
+    }
+    @GetMapping("/getMessage")
+    public String getMessage(){
+        return null;
+    }
 }
