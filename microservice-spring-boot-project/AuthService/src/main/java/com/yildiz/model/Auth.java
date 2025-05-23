@@ -2,6 +2,7 @@ package com.yildiz.model;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -22,12 +23,13 @@ public class Auth extends BaseEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    //@Size(min = 1, max = 100)
     @Column(unique = true, nullable = false)
     private String username;
-    @Email
-    @Column(unique = true, nullable = false)
+    //@Email
+    //@Column(unique = true, nullable = false)
     private String email;
-    @Column(unique = true, nullable = false)
+    //@Column(unique = true, nullable = false)
     private String password;
 
 

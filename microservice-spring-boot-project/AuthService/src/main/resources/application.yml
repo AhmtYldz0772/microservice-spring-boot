@@ -2,5 +2,21 @@ spring:
   application:
     name : service-a
 
+  datasource:
+    url: jdbc:postgresql://localhost:5432/AuthServiceDB
+    username: postgres
+    password: admin
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+    show-sql: true
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+
 server:
   port: 9090
+
+

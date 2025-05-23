@@ -1,13 +1,20 @@
 package com.yildiz.controller;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import com.yildiz.dto.request.DoLoginRequestDto;
+import com.yildiz.service.AuthService;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+
+import static com.yildiz.constant.EndPoint.*;
 
 @RestController
 @RequestMapping
 public class AuthController {
+    private final AuthService authService;
+
+    public AuthController(AuthService authService) {
+        this.authService = authService;
+    }
     /*
     @GetMapping("/")
     public String hello() {
@@ -20,19 +27,19 @@ public class AuthController {
 
      */
 
-    @PostMapping("/register")
+    @PostMapping(ENDPOINT_REGISTER)
     public String register(){
         return null;
     }
-    @PostMapping("/login")
-    public String login(){
-        return null;
+    @PostMapping(ENDPOINT_LOGIN)
+    public ResponseEntity<String> login(@RequestBody DoLoginRequestDto dto){
+        return ResponseEntity.ok(authService.doLogin(dto));
     }
-    @GetMapping("/findAll")
+    @GetMapping(ENDPOINT_FINDALL)
     public String findAll(){
         return null;
     }
-    @GetMapping("/getMessage")
+    @GetMapping(ENDPOINT_GETMESSAGE)
     public String getMessage(){
         return null;
     }
