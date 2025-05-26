@@ -1,4 +1,4 @@
-package com.yildiz.dto.request;
+package com.yildiz.dto.response;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -9,9 +9,8 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class DoReqisterDto {
+public class DoReqisterResponseDto {
     private String username;
-    private String password;
-    private String rePassword;
     private String email;
+    private Long id;
 }

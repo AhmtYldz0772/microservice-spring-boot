@@ -10,6 +10,8 @@ spring:
     properties:
       hibernate:
         dialect: org.hibernate.dialect.PostgreSQLDialect
+        hbm2ddl:
+          auto: update # şemaların içideki tabloları  otomatik güncelesi
     show-sql: true
 
 springdoc:
